@@ -14,6 +14,9 @@ public class Account {
              Если строка удовлетворяет условиям, метод возвращает true, иначе — false.
          */
 
+        if (name == null) {
+            return false;
+        }
         String nameTrim = name.trim();
         int occurrence = StringUtils.countMatches(nameTrim, " ");
 
