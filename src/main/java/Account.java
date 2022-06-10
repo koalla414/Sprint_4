@@ -17,10 +17,10 @@ public class Account {
         if (name == null) {
             return false;
         }
-        String nameTrim = name.trim();
-        int occurrence = StringUtils.countMatches(nameTrim, " ");
+//        String nameTrim = name.trim();
+        int occurrence = StringUtils.countMatches(name, " ");
 
-        if (nameTrim.length() >= 3 && nameTrim.length() <= 19 && occurrence == 1) {
+        if (name.length() >= 3 && name.length() <= 19 && occurrence == 1 && !name.startsWith(" ") && !name.endsWith(" ")) {
 
             System.out.println("Имя введено корректно - его можно напечатать на карте.");
             return true;
